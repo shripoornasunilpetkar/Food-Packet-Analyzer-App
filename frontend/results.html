@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Pack Scanner - Analysis Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Food Pack Scanner</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="scan.html">Scan</a>
+                <a href="results.html" class="active">Results</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="results-section">
+                <div class="report-header">
+                    <h2>Food Package Analysis Report</h2>
+                    <p class="report-date">Generated on: <span id="reportDate"></span></p>
+                </div>
+
+                <div class="report-container">
+                    <!-- Health Score Section -->
+                    <section class="report-section health-score-section">
+                        <h3>Health Score Assessment</h3>
+                        <div class="score-circle">
+                            <canvas id="healthScoreChart"></canvas>
+                            <div class="score-value">
+                                <span id="healthScore">0</span>
+                                <span class="score-max">/10</span>
+                            </div>
+                        </div>
+                        <div class="score-details">
+                            <div class="score-category">
+                                <span class="category-label">Health Rating</span>
+                                <span id="healthRating" class="category-value">Loading...</span>
+                            </div>
+                            <div class="score-category">
+                                <span class="category-label">Risk Level</span>
+                                <span id="riskLevel" class="category-value">Loading...</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Harmful Ingredients Section -->
+                    <section class="report-section harmful-ingredients-section">
+                        <h3>Harmful Ingredients</h3>
+                        <div class="ingredients-list" id="harmfulIngredients">
+                            <div class="loading-placeholder">Loading ingredients analysis...</div>
+                        </div>
+                    </section>
+
+                    <!-- Who Should Avoid Section -->
+                    <section class="report-section warnings-section">
+                        <h3>Who Should Avoid</h3>
+                        <div class="risk-groups" id="warnings">
+                            <div class="loading-placeholder">Loading risk assessment...</div>
+                        </div>
+                    </section>
+
+                    <!-- Long-Term Health Risks Section -->
+                    <section class="report-section risks-section">
+                        <h3>Long-Term Health Risks</h3>
+                        <div class="risks-list" id="longTermRisks">
+                            <div class="loading-placeholder">Loading health impact analysis...</div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="report-actions">
+                    <button id="scanAgainBtn" class="action-button primary">
+                        <span class="icon">📸</span>
+                        Scan Another
+                    </button>
+                    <button id="downloadReportBtn" class="action-button secondary">
+                        <span class="icon">📥</span>
+                        Download
+                    </button>
+                    <button id="shareBtn" class="action-button secondary">
+                        <span class="icon">📤</span>
+                        Share
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html> 
